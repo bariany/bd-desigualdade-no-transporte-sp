@@ -38,7 +38,6 @@ Etapas do desenvolvimento
 - Consultas SQL  
 - Análises dos resultados  
 
-
 ## 💻 Tecnologias Utilizadas  
 - SQL  
 - MySQL  
@@ -60,6 +59,10 @@ Com as consultas implementadas é possível:
 - Comparar padrões de mobilidade entre diferentes grupos sociais;  
 - Apoiar estudos sobre planejamento urbano;  
 - Demonstrar a aplicação prática de SQL em problemas reais.  
+
+## 🗺 Modelo Entidade-Relacionamento
+![Modelo ER](Modelo-EntidadeRelacionamento.png)
+ 
 
 ## 👥 Equipe    
 - Ariany Bruna Gonçalves  
