@@ -55,9 +55,9 @@ Com as consultas implementadas é possível:
 ![Modelo ER](Modelo-EntidadeRelacionamento.png)
  
 ## Equipe    
-- [bariany](https://github.com/Bariany](https://github.com/bariany) 
+- [bariany](https://github.com/bariany) 
 - [gaby001100](https://github.com/gaby001100)
-- [felipe](link)
+- [lfsantosnunescomercial-Cremo](https://github.com/lfsantosnunescomercial-Cremo)
 
 ## Referências
 - [Pesquisa Origem e Destino 2023 do Metro SP](https://www.metro.sp.gov.br/pt_BR/pesquisa-od/)
