@@ -21,6 +21,16 @@ Armazenamento e Modelagem de Dados:
  Controle de Versão:
  • GitHub — Repositório do projeto, versionamento dos scripts SQL e documentação.
 
+## Ciclo de Desenvolvimento
+Partindo do seguinte questionamento: Trabalhadores de baixa renda gastam o dobro do tempo em deslocamento que os de alta renda em SP. Quais distritos têm os maiores tempos?
+Iniciamos nosso processo da seguinte maneira:
+
+1. Modelagem conceitual e logica
+2. Modelagem fisica e implemetação
+3. Extração, transformação e carregamento
+4. Ingestão dos dados (importação em csv)
+
+
 ## Como Instalar e Rodar o Projeto
 Pré-requisitos: 
 Passo a passo de configuração:
