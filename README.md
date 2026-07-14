@@ -79,23 +79,13 @@ Iniciamos nosso processo da seguinte maneira:
 | **tempo_medio_individual** | TIME | Tempo médio das viagens realizadas por transporte individual na zona de origem |
 | **modo_viagem** | VARCHAR | Tipo de transporte utilizado na viagem |
 
-
-## Ciclo de Desenvolvimento
-Partindo do seguinte questionamento: Trabalhadores de baixa renda gastam o dobro do tempo em deslocamento que os de alta renda em SP. Quais distritos têm os maiores tempos?
-Iniciamos nosso processo da seguinte maneira:
-
-1. Modelagem conceitual e logica
-2. Modelagem fisica e implemetação
-3. Extração, transformação e carregamento
-4. Ingestão dos dados (importação em csv)
-
-
 ## Como Instalar e Rodar o Projeto
-Pré-requisitos: 
+Pré-requisitos:
+
 Passo a passo de configuração:
 
 ## Estrutura de Pastas do Repositório
- Uma árvore simples mostrando onde estão os dados brutos, os scripts de ETL, as queries SQL e os relatórios/gráficos gerados.
+Uma árvore simples mostrando onde estão os dados brutos, os scripts de ETL, as queries SQL e os relatórios/gráficos gerados.
 
 ## Equipe    
 - [bariany](https://github.com/bariany) 
