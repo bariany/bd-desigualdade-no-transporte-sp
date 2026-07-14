@@ -26,20 +26,48 @@ Em desenvolvimento.
 | **automoveis_particulares** | INT | Frota em posse das famílias |
 | **emprego_total** | INT | Empregos totais localizados na zona |
 
+#### Tabela: `renda`
+| Atributo | Tipo | Descrição |
+|-----------|------|-----------|
+| **id_renda** | INT | Identificador único da renda |
+| **ano** | INT | Ano da pesquisa |
+| **renda_per_capita** | DECIMAL | Média de renda por pessoa na zona |
+| **renda_mediana_familiar** | DECIMAL | Valor central da renda familiar na zona |
+| **renda_media_familiar** | DECIMAL | Média da renda familiar na zona |
+| **percentual_baixa_renda** | DECIMAL | Percentual da população em situação de baixa renda na zona |
+| **percentual_alta_renda** | DECIMAL | Percentual da população em situação de alta renda na zona |
 
+#### Tabela: `viagem`
+| Atributo | Tipo | Descrição |
+|-----------|------|-----------|
+| **id_indicador_viagem** | INT | Identificador único do indicador de viagem |
+| **ano** | INT | Ano da pesquisa |
+| **total_viagens_produzidas** | INT | Quantidade total de viagens com origem na zona |
+| **total_viagens_atraidas** | INT | Quantidade total de viagens com destino na zona |
+| **tempo_medio_coletivo** | TIME | Tempo médio das viagens realizadas por transporte coletivo na zona de origem |
+| **tempo_medio_individual** | TIME | Tempo médio das viagens realizadas por transporte individual na zona de origem |
+| **modo_viagem** | VARCHAR | Tipo de transporte utilizado na viagem |
 
 ## Tecnologias Utilizadas
-Armazenamento e Modelagem de Dados: 
-• PostgreSQL — Banco de dados relacional para estruturação dos dados.
-• pgAdmin 4 — Interface gráfica para administração e execução de queries SQL.
+### Armazenamento e Modelagem de Dados
+| Tecnologia | Finalidade |
+|------------|------------|
+| **PostgreSQL** | Sistema de gerenciamento de banco de dados relacional utilizado para armazenar e estruturar os dados |
+| **pgAdmin 4** | Interface gráfica utilizada para administração do banco de dados e execução de consultas SQL |
 
- Processamento:
- • SQL — 
- • Microsoft Excel — 
- • Power Query — Ferramenta para realizar transformação e carga dos dados limpos para o Excel.
+### Processamento de Dados
+| Tecnologia | Finalidade |
+|------------|------------|
+| **SQL** | Linguagem utilizada para criação do banco de dados, consultas, manipulação e transformação dos dados |
+| **Microsoft Excel** | Utilizado para análise exploratória, organização e validação dos dados |
+| **Power Query** | Ferramenta utilizada para extração, transformação e carregamento (ETL) dos dados para o Excel |
 
- Controle de Versão:
- • GitHub — Repositório do projeto, versionamento dos scripts SQL e documentação.
+### Controle de Versão
+
+| Tecnologia | Finalidade |
+|------------|------------|
+| **Git** | Controle de versão do projeto |
+| **GitHub** | Hospedagem do repositório, versionamento dos scripts SQL e documentação do projeto |
 
 ## Ciclo de Desenvolvimento
 Partindo do seguinte questionamento: Trabalhadores de baixa renda gastam o dobro do tempo em deslocamento que os de alta renda em SP. Quais distritos têm os maiores tempos?
