@@ -5,6 +5,34 @@ Este projeto propõe a criação e estruturação de um banco de dados relaciona
 ## Status do Projeto
 Em desenvolvimento. 
 
+## Tecnologias Utilizadas
+### Armazenamento e Modelagem de Dados
+| Tecnologia | Finalidade |
+|------------|------------|
+| **PostgreSQL** | Sistema de gerenciamento de banco de dados relacional utilizado para armazenar e estruturar os dados |
+| **pgAdmin 4** | Interface gráfica utilizada para administração do banco de dados e execução de consultas SQL |
+
+### Processamento de Dados
+| Tecnologia | Finalidade |
+|------------|------------|
+| **SQL** | Linguagem utilizada para criação do banco de dados, consultas, manipulação e transformação dos dados |
+| **Microsoft Excel** | Utilizado para análise exploratória, organização e validação dos dados |
+| **Power Query** | Ferramenta utilizada para extração, transformação e carregamento (ETL) dos dados para o Excel |
+
+### Controle de Versão
+| Tecnologia | Finalidade |
+|------------|------------|
+| **GitHub** | Hospedagem do repositório, versionamento dos scripts SQL e documentação do projeto |
+
+## Ciclo de Desenvolvimento
+Partindo do seguinte questionamento: Trabalhadores de baixa renda gastam o dobro do tempo em deslocamento que os de alta renda em SP. Quais distritos têm os maiores tempos?
+Iniciamos nosso processo da seguinte maneira:
+
+1. Modelagem conceitual e logica
+2. Modelagem fisica e implemetação
+3. Extração, transformação e carregamento
+4. Ingestão dos dados (importação em csv)
+
 ## Documentação do Banco de Dados
 ### Visão geral das entidades existentes
 | Tabela | Representa | Descrição |
@@ -48,26 +76,6 @@ Em desenvolvimento.
 | **tempo_medio_individual** | TIME | Tempo médio das viagens realizadas por transporte individual na zona de origem |
 | **modo_viagem** | VARCHAR | Tipo de transporte utilizado na viagem |
 
-## Tecnologias Utilizadas
-### Armazenamento e Modelagem de Dados
-| Tecnologia | Finalidade |
-|------------|------------|
-| **PostgreSQL** | Sistema de gerenciamento de banco de dados relacional utilizado para armazenar e estruturar os dados |
-| **pgAdmin 4** | Interface gráfica utilizada para administração do banco de dados e execução de consultas SQL |
-
-### Processamento de Dados
-| Tecnologia | Finalidade |
-|------------|------------|
-| **SQL** | Linguagem utilizada para criação do banco de dados, consultas, manipulação e transformação dos dados |
-| **Microsoft Excel** | Utilizado para análise exploratória, organização e validação dos dados |
-| **Power Query** | Ferramenta utilizada para extração, transformação e carregamento (ETL) dos dados para o Excel |
-
-### Controle de Versão
-
-| Tecnologia | Finalidade |
-|------------|------------|
-| **Git** | Controle de versão do projeto |
-| **GitHub** | Hospedagem do repositório, versionamento dos scripts SQL e documentação do projeto |
 
 ## Ciclo de Desenvolvimento
 Partindo do seguinte questionamento: Trabalhadores de baixa renda gastam o dobro do tempo em deslocamento que os de alta renda em SP. Quais distritos têm os maiores tempos?
