@@ -18,6 +18,8 @@ Armazenamento e Modelagem de Dados:
  • Microsoft Excel — 
  • Power Query — Ferramenta para realizar transformação e carga dos dados limpos para o Excel.
 
+ Controle de Versão:
+ • GitHub — Repositório do projeto, versionamento dos scripts SQL e documentação.
 
 
 
