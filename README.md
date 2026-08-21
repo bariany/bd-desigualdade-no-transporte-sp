@@ -28,13 +28,29 @@ Em desenvolvimento.
 | **GitHub** | Hospedagem do repositório, versionamento dos scripts SQL e documentação do projeto |
 
 ## Ciclo de Desenvolvimento
-Partindo do seguinte questionamento: Trabalhadores de baixa renda gastam o dobro do tempo em deslocamento que os de alta renda em SP. Quais distritos têm os maiores tempos?
-Iniciamos nosso processo da seguinte maneira:
 
-1. Modelagem conceitual e logica
-2. Modelagem fisica e implemetação
-3. Extração, transformação e carregamento
-4. Ingestão dos dados (importação em csv)
+O projeto foi desenvolvido a partir do seguinte questionamento:
+
+> **Trabalhadores de baixa renda gastam o dobro do tempo em deslocamento que os de alta renda na cidade de São Paulo. Quais zonas apresentam os maiores tempos de deslocamento?**
+
+Para responder a essa questão, estruturamos o desenvolvimento do projeto em quatro etapas principais:
+
+#### 1. Modelagem Conceitual e Lógica
+
+Definição das **entidades, atributos e relacionamentos** necessários para representar e organizar os dados da Pesquisa Origem e Destino.
+
+#### 2. Modelagem Física e Implementação
+
+Criação e estruturação das tabelas no **PostgreSQL**, incluindo a definição dos **tipos de dados, chaves primárias, chaves estrangeiras e relacionamentos** entre as tabelas.
+
+#### 3. Extração, Transformação e Carregamento (ETL)
+
+Preparação, limpeza e transformação dos dados, adequando as informações à estrutura definida no modelo de banco de dados.
+
+#### 4. Ingestão dos Dados
+
+Importação dos arquivos **CSV tratados** para suas respectivas tabelas no banco de dados PostgreSQL, tornando os dados disponíveis para consulta.
+
 
 ## Documentação do Banco de Dados
 ### Visão geral das entidades existentes
@@ -82,7 +98,10 @@ Iniciamos nosso processo da seguinte maneira:
 ## Como Instalar e Rodar o Projeto
 Pré-requisitos:
 
-Passo a passo de configuração:
+Para executar o projeto, é necessário:
+#### 1. Instalar o PostgreSQL
+Instale o [PostgreSQL](https://www.postgresql.org/download/), que será responsável pelo armazenamento e gerenciamento do banco de dados.
+
 
 ## Estrutura de Pastas do Repositório
 Uma árvore simples mostrando onde estão os dados brutos, os scripts de ETL, as queries SQL e os relatórios/gráficos gerados.
@@ -94,7 +113,7 @@ Uma árvore simples mostrando onde estão os dados brutos, os scripts de ETL, as
 
 ## Referências
 - [Pesquisa Origem e Destino 2023 do Metro SP](https://www.metro.sp.gov.br/pt_BR/pesquisa-od/)
-- [Documentação oficial]
+- [Documentação oficial do PostgreSQL]( https://www.postgresql.org/docs/)
 
 ## Licença  
 Este projeto foi desenvolvido para fins acadêmicos e educacionais.  
