@@ -49,7 +49,7 @@ Preparação, limpeza e transformação dos dados, adequando as informações à
 
 #### 4. Ingestão dos Dados
 
-Importação dos arquivos **CSV tratados** para suas respectivas tabelas no banco de dados PostgreSQL, tornando os dados disponíveis para consulta.
+Importação dos arquivos **csv tratados** para suas respectivas tabelas no banco de dados PostgreSQL, tornando os dados disponíveis para consulta.
 
 
 ## Documentação do Banco de Dados
