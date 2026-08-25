@@ -54,11 +54,20 @@ Importação dos arquivos **csv tratados** para suas respectivas tabelas no banc
 
 ## Documentação do Banco de Dados
 ### Visão geral das entidades existentes
+
 | Tabela | Representa | Descrição |
-|---------|------------|-----------|
-| **zona** | Zonas de origem e destino | Zonas de origem e destino da pesquisa |
-| **viagem** | Viagens feitas por zona | Registros das viagens entre as zonas de origem e destino |
-| **renda** | Renda por zona | Informações de renda associadas às zonas |
+| :--- | :--- | :--- |
+| **zonas** | Zonas territoriais | Dados demográficos, domicílios, empregos e tempos médios de deslocamento |
+| **renda** | Renda por zona | Indicadores socioeconômicos de renda per capita e familiar por zona e ano |
+| **faixa_de_renda** | Classificação de renda | Categorias e estratos de faixas de renda |
+| **pessoas_por_renda** | Distribuição de pessoas por faixa | Quantidade de pessoas em cada faixa de renda por zona |
+| **viagem** | Matriz origem-destino de viagens | Fluxos de viagens diárias realizadas entre as zonas de origem e destino |
+| **categoria_tipo** | Tipos de viagem | Classificação das categorias/tipos de viagem |
+| **quantidade_tipo** | Agregado de viagens por tipo | Totais de viagens produzidas e atraídas agrupadas por tipo e zona |
+| **categoria_modo** | Modos de transporte | Modais de transporte utilizados nos deslocamentos (ex.: coletivo, individual, a pé) |
+| **quantidade_modo** | Agregado de viagens por modal | Totais de viagens produzidas e atraídas agrupadas por modal de transporte e zona |
+| **categoria_motivo** | Motivos de deslocamento | Finalidades das viagens realizadas (ex.: trabalho, estudo, saúde) |
+| **quantidade_motivo** | Agregado de viagens por motivo | Totais de viagens produzidas e relação origem-destino por motivo e zona |
 
 ### Dicionário de Dados
 #### Tabela: `zona`
