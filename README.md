@@ -3,7 +3,7 @@
 A cidade de São Paulo é marcada por uma profunda disparidade territorial, onde o CEP de um cidadão determina diretamente o tempo que lhe resta no dia. Enquanto os moradores das regiões centrais usufruem de deslocamentos rápidos, as populações periféricas enfrentam rotinas exaustivas no transporte público, um fenômeno conhecido como "pobreza de tempo" que limita o acesso a oportunidades, estudo e lazer. Para formular soluções que combatam essa segregação urbana, o planejamento público não pode se basear em suposições; ele precisa ser fundamentado em evidências concretas e na organização inteligente de informações sobre o território.
 
 ## Proposta
-Este projeto propõe a criação e estruturação de um banco de dados relacional utilizando dados da [Pesquisa Origem e Destino 2023 do Metro SP](https://www.metro.sp.gov.br/pt_BR/pesquisa-od/). O principal objetivo é mostrar como a Engenharia de Dados e a linguagem SQL podem apoiar a tomada de decisão na gestão da mobilidade urbana, produzindo informações que auxiliem na compreensão da desigualdade social no transporte urbano. 
+Este projeto propõe a criação e estruturação de um banco de dados relacional utilizando dados da [Pesquisa Origem e Destino 2023 do Metrô SP](https://www.metro.sp.gov.br/pt_BR/pesquisa-od/). O principal objetivo é mostrar como a Engenharia de Dados e a linguagem SQL podem apoiar a tomada de decisão na gestão da mobilidade urbana, produzindo informações que auxiliem na compreensão da desigualdade social no transporte urbano. 
 
 ## Status 
 Em desenvolvimento. 
