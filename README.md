@@ -53,114 +53,129 @@ Importação dos arquivos **csv tratados** para suas respectivas tabelas no banc
 
 
 ## Documentação do Banco de Dados
-### Visão geral das entidades existentes
+### Visão Geral das Tabelas
+O banco de dados foi desenvolvido para armazenar e relacionar dados socioeconômicos e de mobilidade urbana da Região Metropolitana de São Paulo, permitindo a obtenção de informações sobre renda, população, viagens e padrões de deslocamento entre as zonas.
 
-| Tabela | Representa | Descrição |
-| :--- | :--- | :--- |
-| **zonas** | Zonas territoriais | Dados demográficos, domicílios, empregos e tempos médios de deslocamento |
-| **renda** | Renda por zona | Indicadores socioeconômicos de renda per capita e familiar por zona e ano |
-| **faixa_de_renda** | Classificação de renda | Categorias e estratos de faixas de renda |
-| **pessoas_por_renda** | Distribuição de pessoas por faixa | Quantidade de pessoas em cada faixa de renda por zona |
-| **viagem** | Matriz origem-destino de viagens | Fluxos de viagens diárias realizadas entre as zonas de origem e destino |
-| **categoria_tipo** | Tipos de viagem | Classificação das categorias/tipos de viagem |
-| **quantidade_tipo** | Agregado de viagens por tipo | Totais de viagens produzidas e atraídas agrupadas por tipo e zona |
-| **categoria_modo** | Modos de transporte | Modais de transporte utilizados nos deslocamentos (ex.: coletivo, individual, a pé) |
-| **quantidade_modo** | Agregado de viagens por modal | Totais de viagens produzidas e atraídas agrupadas por modal de transporte e zona |
-| **categoria_motivo** | Motivos de deslocamento | Finalidades das viagens realizadas (ex.: trabalho, estudo, saúde) |
-| **quantidade_motivo** | Agregado de viagens por motivo | Totais de viagens produzidas e relação origem-destino por motivo e zona |
+| Tabela                | Representa                 | Descrição                                                                                    |
+| :-------------------- | :------------------------- | :------------------------------------------------------------------------------------------- |
+| **zonas**             | Zonas territoriais         | Informações demográficas, domiciliares, de empregos e tempos médios de deslocamento por zona |
+| **renda**             | Renda por zona             | Indicadores socioeconômicos de renda per capita e renda familiar por zona e ano              |
+| **faixa_de_renda**    | Faixas de renda            | Categorias utilizadas para classificação das faixas de renda                                 |
+| **pessoas_por_renda** | Pessoas por faixa de renda | Quantidade de pessoas pertencentes a cada faixa de renda por zona                            |
+| **viagem**            | Viagens entre zonas        | Fluxos de viagens diárias entre zonas de origem e destino                                    |
+| **categoria_tipo**    | Tipos de viagem            | Categorias utilizadas para classificar os tipos de viagem                                    |
+| **quantidade_tipo**   | Viagens por tipo           | Quantidade de viagens produzidas e atraídas por zona e tipo de viagem                        |
+| **categoria_modo**    | Modos de transporte        | Categorias dos modos de transporte utilizados nos deslocamentos                              |
+| **quantidade_modo**   | Viagens por modo           | Quantidade de viagens produzidas e atraídas por zona e modo de transporte                    |
+| **categoria_motivo**  | Motivos de viagem          | Categorias utilizadas para classificar os motivos dos deslocamentos                          |
+| **quantidade_motivo** | Viagens por motivo         | Quantidade de viagens produzidas e atraídas por zona e motivo do deslocamento                |
 
-
+---
 
 ## Dicionário de Dados
-#### `zonas`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_zona` | `SERIAL` | Identificador único da zona |
-| `nome_zona` | `VARCHAR` | Nome da zona |
-| `domicilios_total` | `INT` | Total de domicílios |
-| `familias_total` | `INT` | Total de famílias |
-| `populacao_total` | `INT` | Total da população residente |
-| `empregos_fora_da_residencia` | `INT` | Vagas ocupadas fora do domicílio |
-| `empregos_na_residencia` | `INT` | Vagas ocupadas no próprio domicílio |
-| `empregos_sem_endereco_fixo` | `INT` | Vagas sem endereço fixo |
-| `tempo_medio_coletivo` | `INT` | Tempo médio de deslocamento coletivo (min) |
-| `tempo_medio_individual` | `INT` | Tempo médio de deslocamento individual (min) |
 
-#### `renda`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_renda` | `SERIAL` | Identificador único do registro de renda |
-| `id_zona` | `INT` | Identificador da zona associada |
-| `ano` | `INT` | Ano de referência dos dados |
-| `renda_per_capita` | `INT` | Renda per capita média da zona |
-| `renda_mediana_familiar` | `INT` | Renda mediana das famílias |
-| `renda_media_familiar` | `INT` | Renda média das famílias |
+### `zonas`
 
-#### `faixa_de_renda`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_faixa` | `SERIAL` | Identificador único da faixa de renda |
-| `descricao` | `VARCHAR` | Descrição textual da faixa de renda |
+| Atributo                      | Tipo      | Descrição                                                                |
+| :---------------------------- | :-------- | :----------------------------------------------------------------------- |
+| `id_zona`                     | `SERIAL`  | Identificador único da zona                                              |
+| `nome_zona`                   | `VARCHAR` | Nome da zona                                                             |
+| `domicilios_total`            | `INT`     | Total de domicílios existentes na zona                                   |
+| `familias_total`              | `INT`     | Total de famílias residentes na zona                                     |
+| `populacao_total`             | `INT`     | Total da população residente na zona                                     |
+| `empregos_fora_da_residencia` | `INT`     | Quantidade de empregos localizados fora do domicílio                     |
+| `empregos_na_residencia`      | `INT`     | Quantidade de empregos realizados no próprio domicílio                   |
+| `empregos_sem_endereco_fixo`  | `INT`     | Quantidade de empregos sem endereço fixo                                 |
+| `tempo_medio_coletivo`        | `INT`     | Tempo médio de deslocamento utilizando transporte coletivo, em minutos   |
+| `tempo_medio_individual`      | `INT`     | Tempo médio de deslocamento utilizando transporte individual, em minutos |
 
-#### `pessoas_por_renda`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_zona` | `INT` | Identificador da zona associada |
-| `id_faixa` | `INT` | Identificador da faixa de renda |
-| `quantidade_pessoas` | `INT` | Quantidade de indivíduos pertencentes à faixa na zona |
+### `renda`
 
-#### `categoria_tipo`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_tipo` | `SERIAL` | Identificador único do tipo de viagem |
-| `descricao` | `VARCHAR` | Descrição da categoria/tipo de viagem |
+| Atributo                 | Tipo     | Descrição                                |
+| :----------------------- | :------- | :--------------------------------------- |
+| `id_renda`               | `SERIAL` | Identificador único do registro de renda |
+| `id_zona`                | `INT`    | Identificador da zona associada          |
+| `ano`                    | `INT`    | Ano de referência dos dados              |
+| `renda_per_capita`       | `INT`    | Renda per capita média da zona           |
+| `renda_mediana_familiar` | `INT`    | Renda mediana das famílias da zona       |
+| `renda_media_familiar`   | `INT`    | Renda média das famílias da zona         |
 
-#### `categoria_modo`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_modo` | `SERIAL` | Identificador único do modo de transporte |
-| `descricao` | `VARCHAR` | Descrição do modal de transporte |
+### `faixa_de_renda`
 
-#### `categoria_motivo`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_motivo` | `SERIAL` | Identificador único do motivo do deslocamento |
-| `descricao` | `VARCHAR` | Descrição do motivo |
+| Atributo    | Tipo      | Descrição                             |
+| :---------- | :-------- | :------------------------------------ |
+| `id_faixa`  | `SERIAL`  | Identificador único da faixa de renda |
+| `descricao` | `VARCHAR` | Descrição da faixa de renda           |
 
-#### `viagem`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_viagem` | `SERIAL` | Identificador único da viagem |
-| `id_origem` | `INT` | Identificador da zona de origem |
-| `id_destino` | `INT` | Identificador da zona de destino |
-| `quantidade_viagens_diarias` | `INT` | Volume diário de viagens entre origem e destino |
-| `id_tipo` | `INT` | Identificador do tipo de viagem |
+### `pessoas_por_renda`
 
-#### `quantidade_tipo`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_zona` | `INT` | Identificador da zona |
-| `id_tipo` | `INT` | Identificador do tipo de viagem |
-| `quantidade_viagens_produzidas` | `INT` | Volume de viagens produzidas na zona |
-| `quantidade_viagens_atraidas` | `INT` | Volume de viagens atraídas para a zona |
+| Atributo             | Tipo  | Descrição                                                   |
+| :------------------- | :---- | :---------------------------------------------------------- |
+| `id_zona`            | `INT` | Identificador da zona associada                             |
+| `id_faixa`           | `INT` | Identificador da faixa de renda                             |
+| `quantidade_pessoas` | `INT` | Quantidade de pessoas pertencentes à faixa de renda na zona |
 
-#### `quantidade_modo`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_zona` | `INT` | Identificador da zona |
-| `id_modo` | `INT` | Identificador do modo de transporte |
-| `quantidade_viagens_produzidas` | `INT` | Volume de viagens produzidas na zona pelo modal |
-| `quantidade_viagens_atraidas` | `INT` | Volume de viagens atraídas para a zona pelo modal |
+### `categoria_tipo`
 
-#### `quantidade_motivo`
-| Atributo | Tipo | Descrição |
-| :--- | :--- | :--- |
-| `id_zona` | `INT` | Identificador da zona |
-| `id_motivo` | `INT` | Identificador do motivo do deslocamento |
-| `quantidade_viagens_produzidas` | `INT` | Volume de viagens produzidas na zona |
-| `quantidade_viagens_produzidas_motivo_no_destino` | `INT` | Viagens produzidas considerando motivo no destino |
-| `quantidade_viagens_atraidas` | `INT` | Volume de viagens atraídas para a zona |
-| `quantidade_viagens_atraidas_motivo_no_destino` | `INT` | Viagens atraídas considerando motivo no destino |
+| Atributo    | Tipo      | Descrição                                |
+| :---------- | :-------- | :--------------------------------------- |
+| `id_tipo`   | `SERIAL`  | Identificador único do tipo de viagem    |
+| `descricao` | `VARCHAR` | Descrição do tipo ou categoria de viagem |
+
+### `categoria_modo`
+
+| Atributo    | Tipo      | Descrição                                 |
+| :---------- | :-------- | :---------------------------------------- |
+| `id_modo`   | `SERIAL`  | Identificador único do modo de transporte |
+| `descricao` | `VARCHAR` | Descrição do modo de transporte utilizado |
+
+### `categoria_motivo`
+
+| Atributo    | Tipo      | Descrição                               |
+| :---------- | :-------- | :-------------------------------------- |
+| `id_motivo` | `SERIAL`  | Identificador único do motivo da viagem |
+| `descricao` | `VARCHAR` | Descrição do motivo do deslocamento     |
+
+### `viagem`
+
+| Atributo                     | Tipo     | Descrição                                                                        |
+| :--------------------------- | :------- | :------------------------------------------------------------------------------- |
+| `id_viagem`                  | `SERIAL` | Identificador único do registro de viagem                                        |
+| `id_origem`                  | `INT`    | Identificador da zona de origem                                                  |
+| `id_destino`                 | `INT`    | Identificador da zona de destino                                                 |
+| `quantidade_viagens_diarias` | `INT`    | Quantidade estimada de viagens realizadas diariamente entre a origem e o destino |
+| `id_tipo`                    | `INT`    | Identificador do tipo de viagem                                                  |
+
+### `quantidade_tipo`
+
+| Atributo                        | Tipo  | Descrição                                                         |
+| :------------------------------ | :---- | :---------------------------------------------------------------- |
+| `id_zona`                       | `INT` | Identificador da zona                                             |
+| `id_tipo`                       | `INT` | Identificador do tipo de viagem                                   |
+| `quantidade_viagens_produzidas` | `INT` | Quantidade de viagens produzidas na zona para o tipo especificado |
+| `quantidade_viagens_atraidas`   | `INT` | Quantidade de viagens atraídas pela zona para o tipo especificado |
+
+### `quantidade_modo`
+
+| Atributo                        | Tipo  | Descrição                                                       |
+| :------------------------------ | :---- | :-------------------------------------------------------------- |
+| `id_zona`                       | `INT` | Identificador da zona                                           |
+| `id_modo`                       | `INT` | Identificador do modo de transporte                             |
+| `quantidade_viagens_produzidas` | `INT` | Quantidade de viagens produzidas na zona pelo modo especificado |
+| `quantidade_viagens_atraidas`   | `INT` | Quantidade de viagens atraídas pela zona pelo modo especificado |
+
+### `quantidade_motivo`
+
+| Atributo                                          | Tipo  | Descrição                                                                 |
+| :------------------------------------------------ | :---- | :------------------------------------------------------------------------ |
+| `id_zona`                                         | `INT` | Identificador da zona                                                     |
+| `id_motivo`                                       | `INT` | Identificador do motivo do deslocamento                                   |
+| `quantidade_viagens_produzidas`                   | `INT` | Quantidade de viagens produzidas na zona                                  |
+| `quantidade_viagens_produzidas_motivo_no_destino` | `INT` | Quantidade de viagens produzidas na zona considerando o motivo no destino |
+| `quantidade_viagens_atraidas`                     | `INT` | Quantidade de viagens atraídas pela zona                                  |
+| `quantidade_viagens_atraidas_motivo_no_destino`   | `INT` | Quantidade de viagens atraídas pela zona considerando o motivo no destino |
+
+----------------
 
 ## Como Instalar e Rodar o Projeto
 Pré-requisitos:
