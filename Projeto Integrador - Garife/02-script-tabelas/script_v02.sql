@@ -15,14 +15,15 @@ CREATE TABLE renda (
     id_renda SERIAL PRIMARY KEY,
     id_zona INT NOT NULL,
     ano INT,
-    renda_per_capita NUMERIC(10,2),
-    renda_mediana_familiar NUMERIC(10,2),
-    renda_media_familiar NUMERIC(10,2),
+    renda_per_capita INT,
+    renda_mediana_familiar INT,
+    renda_media_familiar INT,
 
     CONSTRAINT fk_renda_zona
         FOREIGN KEY (id_zona)
         REFERENCES zonas (id_zona)
 );
+
 
 CREATE TABLE faixa_de_renda (
     id_faixa SERIAL PRIMARY KEY,
@@ -133,5 +134,6 @@ CREATE TABLE quantidade_motivo (
         FOREIGN KEY (id_motivo)
         REFERENCES categoria_motivo (id_motivo)
 );
+
 
 
