@@ -181,15 +181,110 @@ O banco de dados foi desenvolvido para armazenar e relacionar dados socioeconôm
 ----------------
 
 ## Como Instalar e Rodar o Projeto
-Pré-requisitos:
+### Pré-requisitos:
 
 Para executar o projeto, é necessário:
 #### 1. Instalar o PostgreSQL
 Instale o [PostgreSQL](https://www.postgresql.org/download/), que será responsável pelo armazenamento e gerenciamento do banco de dados.
 
+### 2. Clonar o repositório
+
+Abra o terminal e execute:
+
+```bash
+git clone https://github.com/bariany/bd-desigualdade-no-transporte-spe.git
+```
+
+Depois, entre na pasta do projeto:
+
+```bash
+cd bd-desigualdade-no-transporte-spe
+```
+
+### 3. Criar o banco de dados
+
+Abra o **pgAdmin 4** e conecte-se ao servidor PostgreSQL.
+
+Crie um novo banco de dados para o projeto. Por exemplo:
+
+```sql
+CREATE DATABASE bd-desigualdade-no-transporte-sp;
+```
+
+Após a criação, conecte-se ao banco pelo pgAdmin 4.
+
+### 4. Criar as tabelas
+
+Execute os scripts SQL disponíveis no repositório para criar a estrutura do banco de dados.
+
+Os scripts são responsáveis pela criação das tabelas, chaves e relacionamentos definidos durante a etapa de modelagem física.
+
+> **Observação:** execute primeiro os scripts responsáveis pela criação das tabelas principais e, posteriormente, os scripts que dependem dessas estruturas.
+
+### 5. Importar os dados
+
+Após criar as tabelas, importe os arquivos **csv tratados** para suas respectivas tabelas no PostgreSQL.
+
+Os dados utilizados no projeto passaram por uma etapa de **ETL**, envolvendo preparação, organização e transformação das informações antes da ingestão no banco.
+
+A importação pode ser realizada pelo próprio **pgAdmin 4**, utilizando a opção de importação de dados da tabela.
+
+### 6. Executar as consultas SQL
+
+Com as tabelas criadas e os dados importados, as consultas SQL podem ser executadas pelo **Query Tool** do pgAdmin 4.
+
+As consultas permitem analisar informações relacionadas a:
+
+* renda;
+* população;
+* zonas territoriais;
+* tempo médio de deslocamento;
+* quantidade de viagens;
+* modos de transporte;
+* motivos das viagens;
+* tipos de viagem.
+
+### Fluxo de execução
+
+O fluxo recomendado para executar o projeto é:
+
+```text
+PostgreSQL
+    ↓
+Criação do banco de dados
+    ↓
+Criação das tabelas
+    ↓
+Importação dos csv tratados
+    ↓
+Execução das consultas SQL
+    ↓
+Análise dos resultados
+```
+
+---
 
 ## Estrutura de Pastas do Repositório
-Uma árvore simples mostrando onde estão os dados brutos, os scripts de ETL, as queries SQL e os relatórios/gráficos gerados.
+
+A organização do repositório separa os arquivos utilizados nas diferentes etapas do projeto, facilitando a localização dos dados, scripts e documentação.
+
+```text
+bd-desigualdade-no-transporte-spe/
+│
+├── dados/
+│   ├── brutos/
+│   └── tratados/
+│
+├── etl/
+│
+├── sql/
+│
+├── README.md
+│
+└── ...
+```
+
+> A estrutura apresentada deve ser ajustada caso novas pastas ou arquivos sejam adicionados ao projeto.
 
 ## Equipe    
 - [bariany](https://github.com/bariany) 
