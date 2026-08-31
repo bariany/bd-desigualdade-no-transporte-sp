@@ -10,4 +10,4 @@ JOIN renda r
   ON z.id_zona = r.id_zona
 WHERE r.ano = 2023
 ORDER BY z.tempo_medio_coletivo DESC NULLS LAST
-LIMIT 1; -- Retorna apenas o 1º colocado
+LIMIT 1;
