@@ -24,7 +24,6 @@ CREATE TABLE renda (
         REFERENCES zonas (id_zona)
 );
 
-SELECT * FROM renda;
 
 CREATE TABLE faixa_de_renda (
     id_faixa SERIAL PRIMARY KEY,
@@ -71,10 +70,6 @@ CREATE TABLE viagem (
 
     CONSTRAINT fk_viagem_origem
         FOREIGN KEY (id_origem)
-
-SELECT * FROM faixa_de_renda
-SELECT * FROM zonas
-
         REFERENCES zonas (id_zona),
 
     CONSTRAINT fk_viagem_destino
@@ -140,5 +135,5 @@ CREATE TABLE quantidade_motivo (
         REFERENCES categoria_motivo (id_motivo)
 );
 
-SELECT * FROM 	quantidade_motivo
+
 
