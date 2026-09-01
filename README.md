@@ -40,8 +40,9 @@ Definição das **entidades, atributos e relacionamentos** necessários para rep
 
 Criação e estruturação das tabelas no **PostgreSQL**, incluindo a definição dos **tipos de dados, chaves primárias, chaves estrangeiras e relacionamentos** entre as tabelas.
 
-Abaixo está o modelo entidade-relacionamento do banco de dados:  xxxx
+Abaixo está o modelo entidade-relacionamento do banco de dados:  
 
+![Modelo Entidade Relacionamento](Projeto%20Integrador%20-%20Garife/01-modelagem-er/engenharia-reversa-bd.png)
 
 #### 3. Extração, Transformação e Carregamento (ETL)
 
