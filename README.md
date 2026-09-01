@@ -5,9 +5,6 @@ A cidade de São Paulo é marcada por uma profunda disparidade territorial, onde
 ## Proposta
 Este projeto propõe a criação e estruturação de um banco de dados relacional utilizando dados da [Pesquisa Origem e Destino 2023 do Metrô SP](https://www.metro.sp.gov.br/pt_BR/pesquisa-od/). O principal objetivo é mostrar como a Engenharia de Dados e a linguagem SQL podem apoiar a tomada de decisão na gestão da mobilidade urbana, produzindo informações que auxiliem na compreensão da desigualdade social no transporte urbano. 
 
-## Status 
-Em desenvolvimento. 
-
 ## Tecnologias Utilizadas
 ### Armazenamento e Modelagem de Dados
 | Tecnologia | Finalidade |
