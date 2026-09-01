@@ -257,7 +257,7 @@ Importação dos csv tratados
     ↓
 Execução das consultas SQL
     ↓
-Análise dos resultados
+Visualização dos resultados
 ```
 
 ---
