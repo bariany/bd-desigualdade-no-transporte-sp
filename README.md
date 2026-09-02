@@ -75,7 +75,7 @@ O banco de dados foi desenvolvido para armazenar e relacionar dados socioeconôm
 
 ## Dicionário de Dados
 
-### `zonas`
+### `zona`
 
 | Atributo                      | Tipo      | Descrição                                                                |
 | :---------------------------- | :-------- | :----------------------------------------------------------------------- |
@@ -190,13 +190,13 @@ Instale o [PostgreSQL](https://www.postgresql.org/download/), que será respons�
 Abra o terminal e execute:
 
 ```bash
-git clone https://github.com/bariany/bd-desigualdade-no-transporte-spe.git
+git clone https://github.com/bariany/bd-desigualdade-no-transporte-sp
 ```
 
 Depois, entre na pasta do projeto:
 
 ```bash
-cd bd-desigualdade-no-transporte-spe
+cd bd-desigualdade-no-transporte-sp
 ```
 
 ### 3. Criar o banco de dados
