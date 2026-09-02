@@ -267,7 +267,7 @@ Visualização dos resultados
 A organização do repositório separa os arquivos utilizados nas diferentes etapas do projeto, facilitando a localização dos dados, scripts e documentação.
 
 ```text
-bd-desigualdade-no-transporte-spe/
+bd-desigualdade-no-transporte-sp/
 │
 ├── dados/
 │   ├── brutos/
