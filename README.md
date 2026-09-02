@@ -75,7 +75,7 @@ O banco de dados foi desenvolvido para armazenar e relacionar dados socioeconôm
 
 ## Dicionário de Dados
 
-### `zona`
+### `zonas`
 
 | Atributo                      | Tipo      | Descrição                                                                |
 | :---------------------------- | :-------- | :----------------------------------------------------------------------- |
